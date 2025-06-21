@@ -1,0 +1,74 @@
+.footer {
+  background-color: #fdf9f2; /* Amarillo muy suave / crema */
+  color: #333;
+  padding: 3rem 0 1rem;
+  margin-top: auto;
+  font-family: 'Segoe UI', sans-serif;
+  border-top: 1px solid #eee;
+  margin-top: 50px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-logo h3 {
+  font-size: 1.7rem;
+  margin-bottom: 0.3rem;
+  font-weight: bold;
+  color: #d8a21d; /* Amarillo más apagado */
+}
+
+.footer-logo p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.footer-links h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  color: #d8a21d;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #444;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #d8a21d;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  padding-top: 1.2rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #888;
+}

@@ -1,0 +1,61 @@
+<app-barnav></app-barnav>
+
+<div class="contenedor-planteles">
+  <h2 class="titulo-seccion">Gestión de Planteles</h2>
+  <button routerLink="/plantel/agregar-plantel" class="btn-agregar">➕ Agregar Plantel</button>
+
+  <table class="tabla-planteles">
+    <thead>
+      <tr>
+        <th>ID Plantel</th>
+        <th>Costo</th>
+        <th>Semanas Gallinas</th>
+        <th>Fecha Compra</th>
+        <th>Fecha Llegada</th>
+        <th>Inicio Postura</th>
+        <th>Término Plantel</th>
+        <th>Inicio Pelecha</th>
+        <th>Total Gallinas</th>
+        <th>Raza Gallinas</th>
+        <th>Estado</th>
+        <th>Notas</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>$4.800.000</td>
+        <td>20</td>
+        <td>2025-01-10</td>
+        <td>2025-01-12</td>
+        <td>2025-02-01</td>
+        <td>2025-06-30</td>
+        <td>2025-06-15</td>
+        <td>1000</td>
+        <td>Hy-Line Brown</td>
+        <td>Activo</td>
+        <td>Lote principal</td>
+        <td><a routerLink="/plantel/editar-plantel" style="text-decoration: none; cursor: pointer; color: #E5A823;">Editar</a></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>$8.000.000</td>
+        <td>16</td>
+        <td>2025-02-05</td>
+        <td>2025-02-07</td>
+        <td>2025-02-28</td>
+        <td>2025-07-15</td>
+        <td>2025-07-01</td>
+        <td>2000</td>
+        <td>Isa Brown</td>
+        <td>Inactivo</td>
+        <td>Requiere revisión</td>
+        <td><a routerLink="/plantel/editar-plantel" style="text-decoration: none; cursor: pointer; color: #E5A823;">Editar</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<app-footer></app-footer>

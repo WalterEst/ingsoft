@@ -1,0 +1,60 @@
+<app-barnav></app-barnav>
+
+<div class="contenedor-produccion">
+  <h2 class="titulo-seccion">Dashboard de Producción</h2>
+
+  <div class="resumen-estadisticas">
+    <div class="card-estadistica">
+      <h3>Total Producción</h3>
+      <p>5.320 unidades</p>
+    </div>
+    <div class="card-estadistica">
+      <h3>Promedio Diario</h3>
+      <p>178 unidades</p>
+    </div>
+    <div class="card-estadistica">
+      <h3>Registros</h3>
+      <p>30 entradas</p>
+    </div>
+  </div>
+
+  <button class="btn-agregar" routerLink="/produccion/registrar-produccion">➕ Agregar Producción</button>
+
+  <table class="tabla-produccion">
+    <thead>
+      <tr>
+        <th>ID Producción</th>
+        <th>ID Plantel</th>
+        <th>Fecha</th>
+        <th>Cantidad</th>
+        <th>ID Categoría</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>2025-06-10</td>
+        <td>180</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>1</td>
+        <td>2025-06-10</td>
+        <td>200</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>3</td>
+        <td>2025-06-09</td>
+        <td>160</td>
+        <td>2</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<app-footer></app-footer>

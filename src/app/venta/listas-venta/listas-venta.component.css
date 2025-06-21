@@ -1,0 +1,59 @@
+.contenedor-ventas {
+  padding: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  margin: auto;
+  width: 70%;
+}
+
+.titulo-seccion {
+  margin-bottom: 12px;
+  font-size: 22px;
+  color: #333;
+}
+
+.btn-agregar {
+  background-color: #E5A823;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-agregar:hover {
+  background-color: #d4951d;
+}
+
+.tabla-ventas {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.tabla-ventas th,
+.tabla-ventas td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-ventas th {
+  background-color: #E5A823;
+  color: white;
+  font-weight: 600;
+}
+
+.tabla-ventas tr:hover {
+  background-color: #f5f5f5;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.tabla-ventas tr:nth-child(even) {
+  background-color: #fcfcfc;
+}

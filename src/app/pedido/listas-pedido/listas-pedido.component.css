@@ -1,0 +1,61 @@
+.contenedor-pedidos {
+  padding: 24px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  margin: 16px;
+  width: 70%;
+  margin: auto;
+}
+
+.titulo-seccion {
+  margin-bottom: 12px;
+  font-size: 22px;
+  color: #333;
+}
+
+.btn-agregar {
+  background-color: #E5A823;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 16px;
+}
+
+.btn-agregar:hover {
+  background-color: #d4951d;
+}
+
+.tabla-pedidos {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+.tabla-pedidos th,
+.tabla-pedidos td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-pedidos th {
+  background-color: #E5A823;
+  color: white;
+  font-weight: 600;
+}
+
+.tabla-pedidos tr:hover {
+  background-color: #f5f5f5;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.tabla-pedidos tr:nth-child(even) {
+  background-color: #fcfcfc;
+}

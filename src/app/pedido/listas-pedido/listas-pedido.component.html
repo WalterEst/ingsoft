@@ -1,0 +1,67 @@
+<app-barnav></app-barnav>
+
+<div class="contenedor-pedidos">
+  <h2 class="titulo-seccion">Gestión de Pedidos</h2>
+  <button routerLink="/pedido/agregar-pedido" class="btn-agregar">➕ Agregar Pedido</button>
+
+  <table class="tabla-pedidos">
+    <thead>
+      <tr>
+        <th>ID Pedido</th>
+        <th>ID Cliente</th>
+        <th>ID Producto</th>
+        <th>Cantidad</th>
+        <th>Fecha Pedido</th>
+        <th>Fecha Entrega</th>
+        <th>Método de Pago</th>
+        <th>Precio</th>
+        <th>Nota del Pedido</th>
+        <th>Estado del Pedido</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>101</td>
+        <td>2001</td>
+        <td>5</td>
+        <td>2025-06-10</td>
+        <td>2025-06-12</td>
+        <td>Transferencia</td>
+        <td>$15.000</td>
+        <td>Entrega urgente</td>
+        <td>Pendiente</td>
+        <td><a routerLink="/pedido/editar-pedido" style="text-decoration: none; cursor: pointer; color: #E5A823;">Editar</a></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>102</td>
+        <td>2003</td>
+        <td>12</td>
+        <td>2025-06-08</td>
+        <td>2025-06-10</td>
+        <td>Débito</td>
+        <td>$36.000</td>
+        <td>Cliente habitual</td>
+        <td>Entregado</td>
+        <td><a routerLink="/pedido/editar-pedido" style="text-decoration: none; cursor: pointer; color: #E5A823;">Editar</a></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>103</td>
+        <td>2002</td>
+        <td>8</td>
+        <td>2025-06-05</td>
+        <td>2025-06-09</td>
+        <td>Efectivo</td>
+        <td>$24.000</td>
+        <td>-</td>
+        <td>Cancelado</td>
+        <td><a routerLink="/pedido/editar-pedido" style="text-decoration: none; cursor: pointer; color: #E5A823;">Editar</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<app-footer></app-footer>

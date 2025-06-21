@@ -1,0 +1,44 @@
+<app-barnav></app-barnav>
+
+<div class="contenedor-formulario">
+  <h2 class="titulo-formulario">Registrar Producción</h2>
+
+  <form class="formulario-produccion">
+    <div class="columnas-formulario">
+      <div class="columna">
+        <div class="campo-formulario">
+          <label for="id_plantel">ID Plantel</label>
+          <input type="number" id="id_plantel" name="id_plantel" required>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="fecha">Fecha</label>
+          <input type="date" id="fecha" name="fecha" required>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="cantidad">Cantidad (Huevos)</label>
+          <input type="number" id="cantidad" name="cantidad" required>
+        </div>
+      </div>
+
+      <div class="columna">
+        <div class="campo-formulario">
+          <label for="id_categoria">Categoría</label>
+          <select id="id_categoria" name="id_categoria" required>
+            <option value="">Seleccione...</option>
+            <option value="Segunda">Segunda</option>
+            <option value="Primera">Primera</option>
+            <option value="Extra">Extra</option>
+            <option value="Súper Extra">Súper Extra</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn-enviar">Guardar Producción</button>
+  </form>
+</div>
+
+
+<app-footer></app-footer>
