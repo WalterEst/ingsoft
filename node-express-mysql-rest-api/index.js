@@ -46,6 +46,19 @@ app.post('/planteles', (req, res) => {
   });
 });
 
+// Editar plantel
+app.put('/planteles/:id', (req, res) => {
+  const id = req.params.id;
+  const data = req.body;
+  db.query('UPDATE Plantel SET ? WHERE id_plantel = ?', [data, id], (err) => {
+    if (err) {
+      res.status(500).send('Error al actualizar plantel');
+      return;
+    }
+    res.status(200).json({ msg: 'Plantel actualizado correctamente' });
+  });
+});
+
 // Obtener producciones
 app.get('/producciones', (req, res) => {
   db.query('SELECT * FROM Produccion', (err, results) => {
