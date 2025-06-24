@@ -7,13 +7,18 @@
     <div class="columnas-formulario">
       <div class="columna">
         <div class="campo-formulario">
-          <label for="id_cliente">ID Cliente</label>
-          <input type="number" id="id_cliente" name="id_cliente" required [(ngModel)]="pedido.id_cliente">
+          <label for="nombre_cliente">Nombre Cliente</label>
+          <input type="text" id="nombre_cliente" name="nombre_cliente" required [(ngModel)]="pedido.nombre_cliente">
         </div>
 
         <div class="campo-formulario">
-          <label for="id_producto">ID Producto</label>
-          <input type="number" id="id_producto" name="id_producto" required [(ngModel)]="pedido.id_producto">
+          <label for="id_categoria">Categoría</label>
+          <select id="id_categoria" name="id_categoria" required [(ngModel)]="pedido.id_categoria">
+            <option value="">Seleccione...</option>
+            <option value="1">Primera</option>
+            <option value="2">Segunda</option>
+            <option value="3">Extra</option>
+          </select>
         </div>
 
         <div class="campo-formulario">

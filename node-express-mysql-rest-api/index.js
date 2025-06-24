@@ -37,7 +37,9 @@ app.get('/planteles', (req, res) => {
 // Crear un plantel
 app.post('/planteles', (req, res) => {
   const data = req.body;
-  db.query('INSERT INTO Plantel SET ?', data, (err, result) => {
+  const sql = `INSERT INTO Plantel (costo, semanas_gallinas, fecha_compra, fecha_llegada, inicio_postura, termino_plantel, inicio_pelecha, gallinas_total, estado, raza_gallina, notas_plantel) VALUES (?,?,?,?,?,?,?,?,?,?,?)`;
+  const values = [data.costo, data.semanas_gallinas, data.fecha_compra, data.fecha_llegada, data.inicio_postura, data.termino_plantel, data.inicio_pelecha, data.gallinas_total, data.estado, data.raza_gallina, data.notas_plantel];
+  db.query(sql, values, (err, result) => {
     if (err) {
       res.status(500).send('Error al crear plantel');
       return;
@@ -50,7 +52,9 @@ app.post('/planteles', (req, res) => {
 app.put('/planteles/:id', (req, res) => {
   const id = req.params.id;
   const data = req.body;
-  db.query('UPDATE Plantel SET ? WHERE id_plantel = ?', [data, id], (err) => {
+  const sql = `UPDATE Plantel SET costo=?, semanas_gallinas=?, fecha_compra=?, fecha_llegada=?, inicio_postura=?, termino_plantel=?, inicio_pelecha=?, gallinas_total=?, estado=?, raza_gallina=?, notas_plantel=? WHERE id_plantel = ?`;
+  const values = [data.costo, data.semanas_gallinas, data.fecha_compra, data.fecha_llegada, data.inicio_postura, data.termino_plantel, data.inicio_pelecha, data.gallinas_total, data.estado, data.raza_gallina, data.notas_plantel, id];
+  db.query(sql, values, (err) => {
     if (err) {
       res.status(500).send('Error al actualizar plantel');
       return;
@@ -73,7 +77,9 @@ app.get('/producciones', (req, res) => {
 // Crear produccion
 app.post('/producciones', (req, res) => {
   const data = req.body;
-  db.query('INSERT INTO Produccion SET ?', data, (err, result) => {
+  const sql = `INSERT INTO Produccion (id_plantel, fecha, cantidad, id_categoria) VALUES (?,?,?,?)`;
+  const values = [data.id_plantel, data.fecha, data.cantidad, data.id_categoria];
+  db.query(sql, values, (err, result) => {
     if (err) {
       res.status(500).send('Error al crear producción');
       return;
@@ -86,7 +92,9 @@ app.post('/producciones', (req, res) => {
 app.put('/producciones/:id', (req, res) => {
   const id = req.params.id;
   const data = req.body;
-  db.query('UPDATE Produccion SET ? WHERE id_produccion = ?', [data, id], (err) => {
+  const sql = `UPDATE Produccion SET id_plantel=?, fecha=?, cantidad=?, id_categoria=? WHERE id_produccion = ?`;
+  const values = [data.id_plantel, data.fecha, data.cantidad, data.id_categoria, id];
+  db.query(sql, values, (err) => {
     if (err) {
       res.status(500).send('Error al actualizar producción');
       return;
@@ -109,7 +117,9 @@ app.get('/pedidos', (req, res) => {
 // Crear pedido
 app.post('/pedidos', (req, res) => {
   const data = req.body;
-  db.query('INSERT INTO Pedido SET ?', data, (err, result) => {
+  const sql = `INSERT INTO Pedido (nombre_cliente, id_categoria, cantidad, fecha_pedido, fecha_entrega, metodo_pago, precio, nota_pedido, estado_pedido) VALUES (?,?,?,?,?,?,?,?,?)`;
+  const values = [data.nombre_cliente, data.id_categoria, data.cantidad, data.fecha_pedido, data.fecha_entrega, data.metodo_pago, data.precio, data.nota_pedido, data.estado_pedido];
+  db.query(sql, values, (err, result) => {
     if (err) {
       res.status(500).send('Error al crear pedido');
       return;
@@ -122,7 +132,9 @@ app.post('/pedidos', (req, res) => {
 app.put('/pedidos/:id', (req, res) => {
   const id = req.params.id;
   const data = req.body;
-  db.query('UPDATE Pedido SET ? WHERE id_pedido = ?', [data, id], (err) => {
+  const sql = `UPDATE Pedido SET nombre_cliente=?, id_categoria=?, cantidad=?, fecha_pedido=?, fecha_entrega=?, metodo_pago=?, precio=?, nota_pedido=?, estado_pedido=? WHERE id_pedido = ?`;
+  const values = [data.nombre_cliente, data.id_categoria, data.cantidad, data.fecha_pedido, data.fecha_entrega, data.metodo_pago, data.precio, data.nota_pedido, data.estado_pedido, id];
+  db.query(sql, values, (err) => {
     if (err) {
       res.status(500).send('Error al actualizar pedido');
       return;
@@ -145,7 +157,9 @@ app.get('/ventas', (req, res) => {
 // Crear venta
 app.post('/ventas', (req, res) => {
   const data = req.body;
-  db.query('INSERT INTO Venta SET ?', data, (err, result) => {
+  const sql = `INSERT INTO Venta (nombre_cliente, cantidad, precio, metodo_pago, fecha_pago, nota_venta, id_plantel) VALUES (?,?,?,?,?,?,?)`;
+  const values = [data.nombre_cliente, data.cantidad, data.precio, data.metodo_pago, data.fecha_pago, data.nota_venta, data.id_plantel];
+  db.query(sql, values, (err, result) => {
     if (err) {
       res.status(500).send('Error al crear venta');
       return;

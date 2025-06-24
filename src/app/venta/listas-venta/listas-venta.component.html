@@ -7,25 +7,25 @@
     <thead>
       <tr>
         <th>ID Venta</th>
+        <th>Nombre Cliente</th>
         <th>Cantidad</th>
         <th>Precio</th>
         <th>Método de Pago</th>
+        <th>Fecha Pago</th>
         <th>Nota de Venta</th>
-        <th>RUT</th>
-        <th>ID Cliente</th>
-        <th>ID Categoría</th>
+        <th>ID Plantel</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let venta of ventas">
         <td>{{ venta.id_venta }}</td>
+        <td>{{ venta.nombre_cliente }}</td>
         <td>{{ venta.cantidad }}</td>
         <td>{{ venta.precio }}</td>
         <td>{{ venta.metodo_pago }}</td>
+        <td>{{ venta.fecha_pago | date:'yyyy-MM-dd' }}</td>
         <td>{{ venta.nota_venta }}</td>
-        <td>{{ venta.rut }}</td>
-        <td>{{ venta.id_cliente }}</td>
-        <td>{{ venta.id_categoria }}</td>
+        <td>{{ venta.id_plantel }}</td>
       </tr>
     </tbody>
   </table>
