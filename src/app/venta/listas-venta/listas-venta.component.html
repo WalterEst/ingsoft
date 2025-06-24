@@ -17,35 +17,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>3</td>
-        <td>$9.000</td>
-        <td>Transferencia</td>
-        <td>Pago parcial</td>
-        <td>12345678</td>
-        <td>101</td>
-        <td>5</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>6</td>
-        <td>$18.000</td>
-        <td>Efectivo</td>
-        <td>-</td>
-        <td>22334455</td>
-        <td>102</td>
-        <td>3</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>1</td>
-        <td>$3.000</td>
-        <td>Débito</td>
-        <td>Cliente nuevo</td>
-        <td>98765432</td>
-        <td>103</td>
-        <td>2</td>
+      <tr *ngFor="let venta of ventas">
+        <td>{{ venta.id_venta }}</td>
+        <td>{{ venta.cantidad }}</td>
+        <td>{{ venta.precio }}</td>
+        <td>{{ venta.metodo_pago }}</td>
+        <td>{{ venta.nota_venta }}</td>
+        <td>{{ venta.rut }}</td>
+        <td>{{ venta.id_cliente }}</td>
+        <td>{{ venta.id_categoria }}</td>
       </tr>
     </tbody>
   </table>

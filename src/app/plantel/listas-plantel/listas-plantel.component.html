@@ -23,35 +23,22 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>$4.800.000</td>
-        <td>20</td>
-        <td>2025-01-10</td>
-        <td>2025-01-12</td>
-        <td>2025-02-01</td>
-        <td>2025-06-30</td>
-        <td>2025-06-15</td>
-        <td>1000</td>
-        <td>Hy-Line Brown</td>
-        <td>Activo</td>
-        <td>Lote principal</td>
-        <td><a routerLink="/plantel/editar-plantel" style="text-decoration: none; cursor: pointer; color: #E5A823;">Editar</a></td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>$8.000.000</td>
-        <td>16</td>
-        <td>2025-02-05</td>
-        <td>2025-02-07</td>
-        <td>2025-02-28</td>
-        <td>2025-07-15</td>
-        <td>2025-07-01</td>
-        <td>2000</td>
-        <td>Isa Brown</td>
-        <td>Inactivo</td>
-        <td>Requiere revisión</td>
-        <td><a routerLink="/plantel/editar-plantel" style="text-decoration: none; cursor: pointer; color: #E5A823;">Editar</a></td>
+      <tr *ngFor="let plantel of planteles">
+        <td>{{ plantel.id_plantel }}</td>
+        <td>{{ plantel.costo }}</td>
+        <td>{{ plantel.semanas_gallinas }}</td>
+        <td>{{ plantel.fecha_compra | date:'yyyy-MM-dd' }}</td>
+        <td>{{ plantel.fecha_llegada | date:'yyyy-MM-dd' }}</td>
+        <td>{{ plantel.inicio_postura | date:'yyyy-MM-dd' }}</td>
+        <td>{{ plantel.termino_plantel | date:'yyyy-MM-dd' }}</td>
+        <td>{{ plantel.inicio_pelecha | date:'yyyy-MM-dd' }}</td>
+        <td>{{ plantel.gallinas_total }}</td>
+        <td>{{ plantel.raza_gallinas }}</td>
+        <td>{{ plantel.estado }}</td>
+        <td>{{ plantel.notas_plantel }}</td>
+        <td>
+          <a routerLink="/plantel/editar-plantel" [queryParams]="{id: plantel.id_plantel}" style="text-decoration: none; cursor: pointer; color: #E5A823;">Editar</a>
+        </td>
       </tr>
     </tbody>
   </table>

@@ -20,6 +20,10 @@ export class ServiciosService {
     return this.http.post(`${this.apiUrl}/planteles`, data);
   }
 
+  updatePlantel(id: number, data: any): Observable<any> {
+    return this.http.put(`${this.apiUrl}/planteles/${id}`, data);
+  }
+
   // PRODUCCIONES
   getProducciones(): Observable<any> {
     return this.http.get(`${this.apiUrl}/producciones`);

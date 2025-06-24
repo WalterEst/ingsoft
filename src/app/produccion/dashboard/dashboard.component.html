@@ -31,26 +31,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1</td>
-        <td>2</td>
-        <td>2025-06-10</td>
-        <td>180</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>1</td>
-        <td>2025-06-10</td>
-        <td>200</td>
-        <td>1</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>3</td>
-        <td>2025-06-09</td>
-        <td>160</td>
-        <td>2</td>
+      <tr *ngFor="let prod of producciones">
+        <td>{{ prod.id_produccion }}</td>
+        <td>{{ prod.id_plantel }}</td>
+        <td>{{ prod.fecha | date:'yyyy-MM-dd' }}</td>
+        <td>{{ prod.cantidad }}</td>
+        <td>{{ prod.id_categoria }}</td>
       </tr>
     </tbody>
   </table>

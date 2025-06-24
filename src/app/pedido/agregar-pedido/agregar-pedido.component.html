@@ -3,39 +3,39 @@
 <div class="contenedor-formulario">
   <h2 class="titulo-formulario">Agregar Nuevo Pedido</h2>
 
-  <form class="formulario-pedido">
+  <form class="formulario-pedido" (ngSubmit)="guardar()">
     <div class="columnas-formulario">
       <div class="columna">
         <div class="campo-formulario">
           <label for="id_cliente">ID Cliente</label>
-          <input type="number" id="id_cliente" name="id_cliente" required>
+          <input type="number" id="id_cliente" name="id_cliente" required [(ngModel)]="pedido.id_cliente">
         </div>
 
         <div class="campo-formulario">
           <label for="id_producto">ID Producto</label>
-          <input type="number" id="id_producto" name="id_producto" required>
+          <input type="number" id="id_producto" name="id_producto" required [(ngModel)]="pedido.id_producto">
         </div>
 
         <div class="campo-formulario">
           <label for="cantidad">Cantidad</label>
-          <input type="number" id="cantidad" name="cantidad" required>
+          <input type="number" id="cantidad" name="cantidad" required [(ngModel)]="pedido.cantidad">
         </div>
 
         <div class="campo-formulario">
           <label for="fecha_pedido">Fecha Pedido</label>
-          <input type="date" id="fecha_pedido" name="fecha_pedido" required>
+          <input type="date" id="fecha_pedido" name="fecha_pedido" required [(ngModel)]="pedido.fecha_pedido">
         </div>
 
         <div class="campo-formulario">
           <label for="fecha_entrega">Fecha Entrega</label>
-          <input type="date" id="fecha_entrega" name="fecha_entrega">
+          <input type="date" id="fecha_entrega" name="fecha_entrega" [(ngModel)]="pedido.fecha_entrega">
         </div>
       </div>
 
       <div class="columna">
         <div class="campo-formulario">
           <label for="metodo_pago">Método de Pago</label>
-          <select id="metodo_pago" name="metodo_pago" required>
+          <select id="metodo_pago" name="metodo_pago" required [(ngModel)]="pedido.metodo_pago">
             <option value="">Seleccione...</option>
             <option value="Transferencia">Transferencia</option>
             <option value="Débito">Débito</option>
@@ -46,17 +46,17 @@
 
         <div class="campo-formulario">
           <label for="precio">Precio</label>
-          <input type="number" id="precio" name="precio" required>
+          <input type="number" id="precio" name="precio" required [(ngModel)]="pedido.precio">
         </div>
 
         <div class="campo-formulario">
           <label for="nota_pedido">Nota del Pedido</label>
-          <textarea id="nota_pedido" name="nota_pedido" rows="3"></textarea>
+          <textarea id="nota_pedido" name="nota_pedido" rows="3" [(ngModel)]="pedido.nota_pedido"></textarea>
         </div>
 
         <div class="campo-formulario">
           <label for="estado_pedido">Estado del Pedido</label>
-          <select id="estado_pedido" name="estado_pedido" required>
+          <select id="estado_pedido" name="estado_pedido" required [(ngModel)]="pedido.estado_pedido">
             <option value="">Seleccione...</option>
             <option value="Pendiente">Pendiente</option>
             <option value="Entregado">Entregado</option>

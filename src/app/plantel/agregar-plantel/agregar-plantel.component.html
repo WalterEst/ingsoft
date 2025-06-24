@@ -3,54 +3,54 @@
 <div class="contenedor-formulario">
   <h2 class="titulo-formulario">Agregar Nuevo Plantel</h2>
 
-  <form class="formulario-plantel">
+  <form class="formulario-plantel" (ngSubmit)="guardar()">
     <div class="columnas-formulario">
       <div class="columna">
         <div class="campo-formulario">
           <label for="costo">Costo</label>
-          <input type="number" id="costo" name="costo" required>
+          <input type="number" id="costo" name="costo" required [(ngModel)]="plantel.costo">
         </div>
 
         <div class="campo-formulario">
           <label for="semanas_gallinas">Semanas de Gallinas</label>
-          <input type="number" id="semanas_gallinas" name="semanas_gallinas" required>
+          <input type="number" id="semanas_gallinas" name="semanas_gallinas" required [(ngModel)]="plantel.semanas_gallinas">
         </div>
 
         <div class="campo-formulario">
           <label for="fecha_compra">Fecha de Compra</label>
-          <input type="date" id="fecha_compra" name="fecha_compra" required>
+          <input type="date" id="fecha_compra" name="fecha_compra" required [(ngModel)]="plantel.fecha_compra">
         </div>
 
         <div class="campo-formulario">
           <label for="fecha_llegada">Fecha de Llegada</label>
-          <input type="date" id="fecha_llegada" name="fecha_llegada" required>
+          <input type="date" id="fecha_llegada" name="fecha_llegada" required [(ngModel)]="plantel.fecha_llegada">
         </div>
 
         <div class="campo-formulario">
           <label for="inicio_postura">Inicio de Postura</label>
-          <input type="date" id="inicio_postura" name="inicio_postura">
+          <input type="date" id="inicio_postura" name="inicio_postura" [(ngModel)]="plantel.inicio_postura">
         </div>
 
         <div class="campo-formulario">
           <label for="termino_plantel">Término del Plantel</label>
-          <input type="date" id="termino_plantel" name="termino_plantel">
+          <input type="date" id="termino_plantel" name="termino_plantel" [(ngModel)]="plantel.termino_plantel">
         </div>
       </div>
 
       <div class="columna">
         <div class="campo-formulario">
           <label for="inicio_pelecha">Inicio de Pelecha</label>
-          <input type="date" id="inicio_pelecha" name="inicio_pelecha">
+          <input type="date" id="inicio_pelecha" name="inicio_pelecha" [(ngModel)]="plantel.inicio_pelecha">
         </div>
 
         <div class="campo-formulario">
           <label for="gallinas_total">Total Gallinas</label>
-          <input type="number" id="gallinas_total" name="gallinas_total" required>
+          <input type="number" id="gallinas_total" name="gallinas_total" required [(ngModel)]="plantel.gallinas_total">
         </div>
 
         <div class="campo-formulario">
           <label for="raza_gallinas">Raza de Gallinas</label>
-          <select id="raza_gallinas" name="raza_gallinas" required>
+          <select id="raza_gallinas" name="raza_gallinas" required [(ngModel)]="plantel.raza_gallinas">
             <option value="">Seleccione...</option>
             <option value="Hy-Line Brown">Hy-Line Brown</option>
             <option value="Isa Brown">Isa Brown</option>
@@ -60,7 +60,7 @@
 
         <div class="campo-formulario">
           <label for="estado">Estado</label>
-          <select id="estado" name="estado" required>
+          <select id="estado" name="estado" required [(ngModel)]="plantel.estado">
             <option value="">Seleccione...</option>
             <option value="Activo">Activo</option>
             <option value="Inactivo">Inactivo</option>
@@ -69,7 +69,7 @@
 
         <div class="campo-formulario">
           <label for="notas_plantel">Notas</label>
-          <textarea id="notas_plantel" name="notas_plantel" rows="3"></textarea>
+          <textarea id="notas_plantel" name="notas_plantel" rows="3" [(ngModel)]="plantel.notas_plantel"></textarea>
         </div>
       </div>
     </div>
